@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot UI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        #messages { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; margin-bottom: 10px; }
+        #prompt { width: 80%; padding: 8px; }
+        #sendBtn { padding: 8px 16px; }
+    </style>
+</head>
+<body>
+    <h2>Chatbot Interface</h2>
+    <div id="messages"></div>
+    <input type="text" id="prompt" placeholder="Enter Prompt...">
+    <button id="sendBtn">Send</button>
+    <script>
+        const messagesDiv = document.getElementById('messages');
+        const promptInput = document.getElementById('prompt');
+        const sendBtn = document.getElementById('sendBtn');
+
+        sendBtn.onclick = async function() {
+            const prompt = promptInput.value;
+            if (!prompt) return;
+            messagesDiv.innerHTML += `<div><b>You:</b> ${prompt}</div>`;
+            promptInput.value = '';
+            const res = await fetch('/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt })
+            });
+            const data = await res.json();
+            console.log('Response:', data.response);
+            messagesDiv.innerHTML += `<div><b>Bot:</b> ${data.response}</div>`;
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        };
+    </script>
+</body>
+</html>
