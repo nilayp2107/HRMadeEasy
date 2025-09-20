@@ -37,3 +37,11 @@ Query(text) -> Vector_embeddings -> Similarity Search (Vector DB) -> Top k conte
 <br>
  <br>Now open any browser and type localhost:5000
 
+
+## SnapShots:
+Initial View<br>
+<img src="./Screenshots/Screenshot 2025-09-20 at 10.27.47 PM.png" alt="Dashboard Preview" width="600"/>
+<br> Ask about your queries regarding stock options
+<img src="./Screenshots/Screenshot 2025-09-20 at 10.16.16 PM.png" alt="Dashboard Preview" width="600"/>
+<br> Ask about your queries regarding leaves
+<img src="./Screenshots/Screenshot 2025-09-20 at 10.16.16 PM.png" alt="Dashboard Preview" width="600"/>
