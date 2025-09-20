@@ -1,1 +1,8 @@
 Flask
+sentence-transformers
+faiss-cpu
+pymupdf
+numpy
+tensorflow
+torch
+huggingface_hub
