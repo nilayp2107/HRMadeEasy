@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request, jsonify
 from sentence_transformers import SentenceTransformer
 import numpy as np
+from vectorDB.retrieve import similarity_search
 
 
 app = Flask(__name__)
@@ -19,12 +20,13 @@ def send():
     data = request.get_json()
     prompt = data.get('prompt', '')
     print(f"User prompt: {prompt}")
+    context = similarity_search(prompt)
     # Encode the prompt to get the embedding
-    embedding = model.encode(prompt)
+    # embedding = model.encode(prompt)
     # Print only the first float of the embedding
-    print("First float of embedding:", float(embedding[0]))
+    #print("First float of embedding:", float(embedding[0]))
     # Optionally, return the value in the response for testing
-    return jsonify({'response': f'First float of embedding: {float(embedding[0])}'})
+    return jsonify({'response': context})
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
