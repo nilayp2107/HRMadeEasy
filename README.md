@@ -33,7 +33,9 @@ Query(text) -> Vector_embeddings -> Similarity Search (Vector DB) -> Top k conte
   2. Install all the requirements
      <br /> <code>$ pip3 install -r requirements.txt</code>
   3. Run the app.py file
-    <br /> <code>$ python3 app.js </code>
+    <br /> <code>$ python3 app.py </code>
+  4. Run the store.py file to store the vector embeddings of the PDF files
+    <br /> <code>$ python3 store.py </code>
 <br>
  <br>Now open any browser and type localhost:5000
 
