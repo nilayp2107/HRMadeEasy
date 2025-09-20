@@ -1,4 +1,4 @@
-# HRMadeEasy http://192.168.0.103:8501
+# HRMadeEasy [http://192.168.0.103:8501](https://4xx08h7d-8501.inc1.devtunnels.ms/)
 A project aimed at developing an AI Agent to Handle work related to Human Resource Management.
 
 ## HR Assistant
