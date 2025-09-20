@@ -10,7 +10,7 @@ Basic Principal: Retrieval Augmented Generation with Vector DB and carefully con
 ### Technologies Used
 AI Model used: gpt-oss-20b
 <br>
-Database: Milvus
+Vector Database: FAISS
 <br>
 UI: Flask
 <br>
@@ -25,3 +25,15 @@ Output: LLM generated text
 <br>
 <br>
 Query(text) -> Vector_embeddings -> Similarity Search (Vector DB) -> Top k contexts -> Prompt Construction -> Feeding an LLM -> LLM Response
+
+
+## How to Run the code
+ 1. Make a virtual environment
+     <br> <code>$ python3 -m venv venv</code>
+  2. Install all the requirements
+     <br /> <code>$ pip3 install -r requirements.txt</code>
+  3. Run the app.py file
+    <br /> <code>$ python3 app.js </code>
+<br>
+ <br>Now open any browser and type localhost:5000
+
